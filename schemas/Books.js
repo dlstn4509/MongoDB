@@ -4,18 +4,18 @@ const { Schema } = mongoose
 const schema = {
   title: {
     type: String,
-    require: true
+    required: true
   },
   writer: {
     type: String,
-    require: true
+    required: true
   },
   content: {
     type: String
   },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now().toString()
   }
 }
 

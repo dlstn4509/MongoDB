@@ -4,12 +4,12 @@ const { Schema } = mongoose
 const schema = {
   userid: {
     type: String,
-    require: true,
+    required: true,
     unique: true
   },
   username: {
     type: String,
-    require: true
+    required: true
   },
   createdAt: {
     type: Date,
