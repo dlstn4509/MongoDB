@@ -1,0 +1,58 @@
+<script>
+  /* function User(_name, _age) {
+    this.name = _name;
+    this.age = _age
+  }
+
+  User.prototype.getName = function() {
+    return this.name
+  }
+  User.prototype.setName = function(_name) {
+    this.name = _name;
+  }
+  User.prototype.introduce = function() {
+    return `${this.name} 입니다. 나이는 ${this.age} 입니다.`
+  }
+
+
+  User.prototype.getAge = function() {
+    return this.age
+  }
+  User.prototype.setAge = function(_age) {
+    this.age = _age;
+  }
+  User.prototype.introduce = function() {
+    return `${this.name} 입니다. 나이는 ${this.age} 입니다.`
+  } */
+
+  class User {
+    constructor(_name, _age) {
+      this.name = _name;
+      this.age = _age
+    }
+    getName = function () {
+      return this.name
+    }
+    setName = function (_name) {
+      this.name = _name;
+    }
+    getAge = function () {
+      return this.age
+    }
+    setAge = function (_age) {
+      this.age = _age;
+    }
+    introduce = function () {
+      return `${this.name} 입니다. 나이는 ${this.age} 입니다.`
+    }
+  }
+
+
+
+
+  const hongkd = new User('hong.k.d', 25);
+  const hongks = new User('hong.k.s', 30);
+
+  console.log(hongkd.introduce())
+  console.log(hongks.introduce())
+</script>

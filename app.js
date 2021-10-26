@@ -1,9 +1,9 @@
 /************* global require *************/
 require('./modules/dotenv-init')()
+require('./modules/mongo-init')()
 const express = require('express')
 const app = express()
 const path = require('path')
-const { connect } = require('./schemas')()
 
 const method = require('./middlewares/method-mw')
 const logger = require('./middlewares/morgan-mw')
@@ -40,8 +40,10 @@ app.use(logger)
 
 /*************** router init **************/
 const bookRouter = require('./routes/book')
+const userRouter = require('./routes/user')
 
 app.use('/book', bookRouter)
+app.use('/user', userRouter)
 
 
 /**************** error init **************/
